@@ -17,6 +17,9 @@ public class EncoderServiceImpl implements EncoderService{
 		
 		String[] stringInArray = string.split(" ");
 		
+		int stringLength = stringInArray.length;
+		System.out.println(stringLength);
+		
 		String encoderString = "";
 		
 		for(String str: stringInArray) {
@@ -27,13 +30,22 @@ public class EncoderServiceImpl implements EncoderService{
 				
 				String capitalString = smallString.toString().toUpperCase();
 				
-				System.out.println(capitalString);		
+//				System.out.println(capitalString);		
 				
 				String morseCode = morseCodeAlphabetDao.findByWord(capitalString).getMorseCode();
 				
 				encoderString += morseCode + " ";
 				
 			}
+			
+			
+			if(stringLength > 1) {
+				
+				encoderString += " / ";
+				
+				stringLength--;
+			}
+			
 			
 		}
 		

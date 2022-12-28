@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sanket.exception.EncoderException;
+import com.sanket.model.UserResponse;
 import com.sanket.service.EncoderService;
 
 @RestController
@@ -19,11 +20,12 @@ public class EncoderController {
 	EncoderService encoderService;
 	
 	
-	@GetMapping("/encode/{string}")
-	public ResponseEntity<String> encodeTheString(@PathVariable String string) throws EncoderException{
+	@PostMapping("/encode")
+	public ResponseEntity<String> encodeTheString(@RequestBody UserResponse userResponse) throws EncoderException{
 		
+		String userString = userResponse.getResponse();
 		
-		String encoderString = encoderService.encodeString(string);
+		String encoderString = encoderService.encodeString(userString);
 		
 		return new ResponseEntity<>(encoderString, HttpStatus.ACCEPTED);
 		
