@@ -30,5 +30,7 @@ public class EncoderController {
 		return new ResponseEntity<>(encoderString, HttpStatus.ACCEPTED);
 		
 	}
+	
+	
 
 }
