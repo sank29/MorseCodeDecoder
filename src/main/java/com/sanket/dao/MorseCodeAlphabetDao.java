@@ -8,5 +8,7 @@ public interface MorseCodeAlphabetDao extends JpaRepository<MorseCodeAlphabet, I
 	
 	
 	public MorseCodeAlphabet findByWord(String string);
+	
+	public MorseCodeAlphabet findByMorseCode(String string);
 
 }

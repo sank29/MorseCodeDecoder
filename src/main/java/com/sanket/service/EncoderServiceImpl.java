@@ -30,8 +30,6 @@ public class EncoderServiceImpl implements EncoderService{
 				
 				String capitalString = smallString.toString().toUpperCase();
 				
-//				System.out.println(capitalString);		
-				
 				String morseCode = morseCodeAlphabetDao.findByWord(capitalString).getMorseCode();
 				
 				encoderString += morseCode + " ";
