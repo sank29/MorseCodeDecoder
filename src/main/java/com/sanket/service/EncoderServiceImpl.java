@@ -28,11 +28,19 @@ public class EncoderServiceImpl implements EncoderService{
 				
 				Character smallString = str.charAt(i);
 				
-				String capitalString = smallString.toString().toUpperCase();
 				
-				String morseCode = morseCodeAlphabetDao.findByWord(capitalString).getMorseCode();
 				
-				encoderString += morseCode + " ";
+				if(!smallString.toString().equals("\n")) {
+					
+					String capitalString = smallString.toString().toUpperCase();
+					
+					String morseCode = morseCodeAlphabetDao.findByWord(capitalString).getMorseCode();
+					
+					encoderString += morseCode + " ";
+					
+				}
+				
+				
 				
 			}
 			
