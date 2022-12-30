@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MorseCodeDecoderApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MorseCodeDecoderApplication.class, args);
+		SpringApplication.run(MorseCodeDecoderApplication.class, args); 
 	}
 
 }
