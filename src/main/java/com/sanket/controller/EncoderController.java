@@ -33,8 +33,6 @@ public class EncoderController {
 		
 		responseToUser.setMorseCode(encoderString);
 		
-		
-		
 		return new ResponseEntity<ResponseToUser>(responseToUser, HttpStatus.OK);
 		
 	}
