@@ -36,9 +36,5 @@ public class EncoderController {
 		return new ResponseEntity<ResponseToUser>(responseToUser, HttpStatus.OK);
 		
 	}
-	
-
-	
-	
 
 }
